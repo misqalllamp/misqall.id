@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis-qall Lamp - Solusi Relaksasi Premium dari Limbah Bonggol Jagung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-primary: #ffd700;
+            --gold-secondary: #b8860b;
+            --gold-light: #f0e68c;
+            --black-primary: #000000;
+            --black-secondary: #1a1a1a;
+            --black-light: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+        font-family: 'Quicksand', sans-serif;
+        background: linear-gradient(135deg, var(--black-primary) 0%, var(--black-secondary) 50%, var(--black-light) 100%);
+        color: var(--gold-light);
+        line-height: 1.7;
+        overflow-x: hidden;
+        }
+
+        /* Judul / Heading */
+        h1, h2, h3, h4 {
+        font-family: 'Gabriola', cursive;
+        letter-spacing: 1px;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--gold-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold-light);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            color: var(--gold-primary);
+            background: rgba(184, 134, 11, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--gold-light);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(184, 134, 11, 0.3);
+            border: 3px solid var(--gold-primary);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gold-primary);
+            color: var(--black-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(184, 134, 11, 0.4);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold-primary);
+            color: var(--black-primary);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold-primary);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: linear-gradient(145deg, var(--black-secondary), var(--black-light));
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(184, 134, 11, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(184, 134, 11, 0.2);
+        }
+
+        .about-card i {
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-card h3 {
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Variants Section */
+        .variants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.variant-card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(145deg, var(--black-secondary), var(--black-light));
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(184, 134, 11, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.variant-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(184, 134, 11, 0.25);
+}
+
+.variant-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.variant-content {
+    padding: 1.8rem;
+    text-align: center;
+}
+
+        /* Features Section */
+        .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    background: linear-gradient(145deg, var(--black-secondary), var(--black-light));
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(184, 134, 11, 0.25);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--gold-primary);
+}
+
+.feature-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--gold-primary);
+}
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, var(--black-secondary), var(--black-light));
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(184, 134, 11, 0.3);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--gold-primary);
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.3;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--gold-primary);
+        }
+        .review-form {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(145deg, var(--black-secondary), var(--black-light));
+    border-radius: 15px;
+    border: 1px solid rgba(184,134,11,0.3);
+}
+
+.review-form input, .review-form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: var(--gold-light);
+}
+
+.review-form button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gold-primary);
+    color: var(--black-primary);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-form button:hover {
+    background: var(--gold-secondary);
+}
+
+
+        /* Contact Section Layout Only */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(145deg, var(--black-secondary), var(--black-light));
+    border-radius: 15px;
+    border: 1px solid rgba(184,134,11,0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(184,134,11,0.25);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--gold-primary);
+}
+
+
+        /* Footer */
+        footer {
+            background: var(--black-primary);
+            padding: 4rem 0 2rem;
+            border-top: 2px solid var(--gold-primary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--gold-light);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Mis-qall<span>Lamp</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#varian">Varian</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#manfaat">Manfaat</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Transformasi Stres Menjadi Kedamaian dengan Satu Sentuhan</h1>
+                <p>Lampu relaksasi revolusioner yang menggabungkan keindahan kaligrafi, kehangatan batik Pekalongan, dan kekuatan alam untuk mengusir stres sehari-hari.</p>
+                <div class="cta-buttons">
+                    <a href="#varian" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i>Beli Sekarang
+                    </a>
+                    <a href="#tentang" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400/000000/ffd700?text=MIS-QALL+LAMP+Premium" alt="Mis-qall Lamp - Lampu Relaksasi Premium dengan Desain Elegan">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa itu Mis-qall Lamp?</h2>
+                <p>Inovasi terbaru yang mengubah limbah menjadi karya seni fungsional untuk kesehatan mental Anda</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Ramah Lingkungan</h3>
+                    <p>100% terbuat dari limbah bonggol jagung yang didaur ulang, mendukung gaya hidup sustainable</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Relaksasi Total</h3>
+                    <p>Kombinasi aromaterapi, cahaya lembut, dan musik religi untuk pengalaman relaksasi menyeluruh</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Seni Budaya</h3>
+                    <p>Menampilkan motif kaligrafi dan batik khas Pekalongan yang memperkaya nilai estetika</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Variants Section -->
+    <section id="varian" style="background: linear-gradient(135deg, var(--black-light), var(--black-secondary));">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pilih Varian Sesuai Kebutuhan Anda</h2>
+                <p>Setiap varian dirancang khusus untuk memberikan pengalaman relaksasi yang personal dan efektif</p>
+            </div>
+            <div class="variants-grid">
+                <div class="variant-card">
+                    <img src="https://via.placeholder.com/400x300/000000/ffd700?text=Varian+Kaligrafi" alt="Varian Kaligrafi - Desain Elegan dengan Motif Kaligrafi Islami" class="variant-image">
+                    <div class="variant-content">
+                        <h3>Varian Kaligrafi</h3>
+                        <p>Fokus pada aromaterapi dengan essential oil pilihan untuk menenangkan pikiran dan jiwa</p>
+                        <div class="variant-price">Rp 299.000</div>
+                        <a href="https://shopee.co.id" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i>Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+                <div class="variant-card">
+                    <img src="https://via.placeholder.com/400x300/000000/ffd700?text=Varian+Batik" alt="Varian Batik - Kombinasi Modern dan Tradisional Batik Pekalongan" class="variant-image">
+                    <div class="variant-content">
+                        <h3>Varian Batik</h3>
+                        <p>Integrasi cahaya relaksasi dengan motif batik eksklusif untuk nuansa tradisional yang modern</p>
+                        <div class="variant-price">Rp 349.000</div>
+                        <a href="https://shopee.co.id" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i>Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+                <div class="variant-card">
+                    <img src="https://via.placeholder.com/400x300/000000/ffd700?text=Varian+Premium" alt="Varian Premium - Paket Lengkap dengan Musik Religi Terintegrasi" class="variant-image">
+                    <div class="variant-content">
+                        <h3>Varian Premium</h3>
+                        <p>Paket lengkap dengan speaker built-in untuk musik religi dan semua fitur premium</p>
+                        <div class="variant-price">Rp 499.000</div>
+                        <a href="https://shopee.co.id" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i>Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fitur">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fitur Unggulan yang Membuat Berbeda</h2>
+                <p>Setiap detail dirancang untuk memberikan pengalaman relaksasi terbaik</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-cloud-rain feature-icon"></i>
+                    <div>
+                        <h3>Aromaterapi Cerdas</h3>
+                        <p>Essential oil diffuser dengan timer otomatis untuk menyebar aroma terapi yang menenangkan</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lightbulb feature-icon"></i>
+                    <div>
+                        <h3>Cahaya Relaksasi</h3>
+                        <p>LED adjustable dengan 16 warna berbeda untuk terapi cahaya yang sesuai mood Anda</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-music feature-icon"></i>
+                    <div>
+                        <h3>Musik Spiritual</h3>
+                        <p>Speaker built-in dengan koleksi musik religi untuk meditasi dan ketenangan spiritual</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf feature-icon"></i>
+                    <div>
+                        <h3>Material Alami</h3>
+                        <p>Dibuat dari limbah bonggol jagung yang ramah lingkungan dan biodegradable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" style="background: linear-gradient(135deg, var(--black-light), var(--black-secondary));">
+    <div class="container">
+        <div class="section-header">
+            <h2>Kata Mereka yang Sudah Merasakan Manfaatnya</h2>
+            <p>Bergabung dengan 1000+ pelanggan yang telah menemukan kedamaian dengan Mis-qall Lamp</p>
+        </div>
+        <div class="testimonials-grid" id="testimonial-list">
+            <!-- Testimoni statis yang sudah ada tetap -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Sebagai freelancer yang sering kerja hingga larut, lampu ini jadi teman terbaik..."
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/50x50/000000/ffd700?text=R" alt="Avatar Rina" class="author-avatar">
+                    <div><strong>Rina, 25</strong><p>Freelancer Designer</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Tambah Review -->
+        <div class="review-form">
+            <h3>Tulis Pengalaman Anda</h3>
+            <form id="reviewForm">
+                <input type="text" id="reviewer" placeholder="Nama Anda" required>
+                <textarea id="reviewText" rows="4" placeholder="Tulis komentar Anda..." required></textarea>
+                <button type="submit">Kirim Review</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+   <section id="kontak">
+    <div class="container">
+        <div class="section-header">
+            <h2>Siap Mengalami Transformasi Relaksasi?</h2>
+            <p>Hubungi kami untuk informasi lebih lanjut atau langsung pesan melalui Shopee</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-store"></i>
+                <h3>Beli di Shopee</h3>
+                <p>Dapatkan promo eksklusif dan gratis ongkir</p>
+                <a href="https://shopee.co.id" class="btn btn-primary">Kunjungi Toko</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Telepon/WhatsApp</h3>
+                <p>+62 812-3456-7890</p>
+                <a href="https://wa.me/6281234567890" class="btn btn-secondary">Chat Sekarang</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Instagram</h3>
+                <p>Instragram.com</p>
+                <a href="https://instagram.com/" class="btn btn-secondary">Pesan Instagram</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Mis-qall Lamp</div>
+                    <p>Transformasi stres menjadi kedamaian dengan inovasi lampu relaksasi premium</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#varian">Produk</a></li>
+                        <li><a href="#testimoni">Testimoni</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Panduan Penggunaan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Garansi</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(184, 134, 11, 0.3);">
+                <p>© 2025 Mis-qall Lamp. All rights reserved. Made with ❤️ for your mental wellness</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Firebase -->
+<script type="module">
+  // Import library Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+  // === GANTI dengan konfigurasi Firebase milik Anda ===
+   const firebaseConfig = {
+    apiKey: "AIzaSyBerb0PGcEmJi7DKhHsoxSMnzduXZ-ogqU",
+    authDomain: "mis-qall.firebaseapp.com",
+    projectId: "mis-qall",
+    storageBucket: "mis-qall.firebasestorage.app",
+    messagingSenderId: "845287838681",
+    appId: "1:845287838681:web:ece343f4c0728e5b043fc8",
+    measurementId: "G-EH4EW4768M"
+  };
+
+  // Inisialisasi Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Fungsi untuk menampilkan kartu testimoni
+  function addReviewCard(name, text) {
+    const card = document.createElement("div");
+    card.classList.add("testimonial-card");
+    card.innerHTML = `
+      <div class="testimonial-text">"${text}"</div>
+      <div class="testimonial-author">
+          <img src="https://via.placeholder.com/50x50/000000/ffd700?text=${name.charAt(0).toUpperCase()}" class="author-avatar">
+          <div><strong>${name}</strong><p>Pembeli</p></div>
+      </div>
+    `;
+    document.getElementById("testimonial-list").appendChild(card);
+  }
+
+  // Saat user submit form → simpan ke Firestore
+  document.getElementById("reviewForm").addEventListener("submit", async function(e){
+    e.preventDefault();
+    const name = document.getElementById("reviewer").value;
+    const text = document.getElementById("reviewText").value;
+
+    try {
+      await addDoc(collection(db, "testimoni"), {
+        nama: name,
+        komentar: text,
+        waktu: new Date()
+      });
+      document.getElementById("reviewForm").reset();
+      alert("Komentar berhasil disimpan!");
+    } catch (err) {
+      console.error("Error tambah komentar:", err);
+      alert("Gagal menyimpan komentar, coba lagi!");
+    }
+  });
+
+  // Load data dari Firestore
+  const q = query(collection(db, "testimoni"), orderBy("waktu", "desc"));
+  onSnapshot(q, (snapshot) => {
+    document.getElementById("testimonial-list").innerHTML = "";
+    snapshot.forEach(doc => {
+      const data = doc.data();
+      addReviewCard(data.nama, data.komentar);
+    });
+  });
+</script>
+
+</html>
