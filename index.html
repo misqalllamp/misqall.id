@@ -21,6 +21,13 @@
             padding: 0;
             box-sizing: border-box;
         }
+        section {
+        scroll-margin-top: 50px; /* sesuaikan dengan tinggi header */
+        }
+        .variant-content .btn {
+        margin-top: 2rem;
+        }
+
         body {
         font-family: 'Quicksand', sans-serif;
         background: linear-gradient(135deg, var(--black-primary) 0%, var(--black-secondary) 50%, var(--black-light) 100%);
@@ -61,20 +68,31 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--gold-primary);
-            text-decoration: none;
-        }
+        display: flex;
+  align-items: center;   /* sejajarkan teks dan logo */
+  gap: 10px;             /* jarak antar logo & teks */
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--gold-primary);
+  text-decoration: none;
+}
 
-        .logo span {
-            color: var(--gold-light);
-        }
+.logo span {
+  color: var(--gold-light); /* biar teks ada kontras */
+}
+
+.logo-img {
+  height: 60px;   /* atur sesuai ukuran logo */
+  width: auto;
+  display: block;
+}
+
 
         nav ul {
             display: flex;
             list-style: none;
             gap: 2rem;
+            
         }
 
         nav a {
@@ -136,12 +154,13 @@
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(184, 134, 11, 0.3);
             border: 3px solid var(--gold-primary);
+            width: 500px; /* tentukan lebar */
+            height: auto; /* biar proporsi terjaga */
         }
-
         .cta-buttons {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
+            gap: 2rem;
+            margin-top: 4rem; /*jarak untuk tombol dan atasnya*/
         }
 
         .btn {
@@ -179,7 +198,7 @@
 
         /* Section Styles */
         section {
-            padding: 6rem 0;
+            padding: 3rem 0;
             position: relative;
         }
 
@@ -211,6 +230,7 @@
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
+            margin-top: 2rem; /* jarak antara garis dan deskripsi */
         }
 
         /* About Section */
@@ -252,6 +272,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+    justify-content: center;
+}
+.paket-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center semua item */
+    gap: 4rem;
 }
 
 .variant-card {
@@ -505,13 +532,16 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">Mis-qall<span>Lamp</span></a>
+           <a href="#" class="logo">
+            <img src="d:\KIR WAJIB BIMA\Fiksi\Persiapan FINAL\WIBESITE\logo-wibesite.png" alt="Mis-qall Lamp Logo" class="logo-img">
+            <span>Mis-qall Lamp</span>
+           </a>
             <nav>
                 <ul>
                     <li><a href="#tentang">Tentang</a></li>
-                    <li><a href="#varian">Varian</a></li>
                     <li><a href="#fitur">Fitur</a></li>
-                    <li><a href="#manfaat">Manfaat</a></li>
+                    <li><a href="#varian">Varian</a></li>
+                    <li><a href="#paket">Paket</a></li>
                     <li><a href="#testimoni">Testimoni</a></li>
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
@@ -523,8 +553,8 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Transformasi Stres Menjadi Kedamaian dengan Satu Sentuhan</h1>
-                <p>Lampu relaksasi revolusioner yang menggabungkan keindahan kaligrafi, kehangatan batik Pekalongan, dan kekuatan alam untuk mengusir stres sehari-hari.</p>
+                <h1>Perubahan Masalah Mental Menjadi Kedamaian dengan Satu Sentuhan</h1>
+                <p>Mis-qall Lamp merupakan Lampu relaksasi multifungsi yang menggabungkan keindahan kaligrafi, kehangatan batik Pekalongan, dan beberapa metode relaksasi untuk mengatasi gejala stres di kehidupan Sehari-hari.</p>
                 <div class="cta-buttons">
                     <a href="#varian" class="btn btn-primary">
                         <i class="fas fa-shopping-cart"></i>Beli Sekarang
@@ -544,35 +574,111 @@
     <section id="tentang">
         <div class="container">
             <div class="section-header">
-                <h2>Mengapa itu Mis-qall Lamp?</h2>
-                <p>Inovasi terbaru yang mengubah limbah menjadi karya seni fungsional untuk kesehatan mental Anda</p>
+                <h2>Mengapa harus Mis-qall Lamp?</h2>
+                <p>Karena Mis-qall Lamp adalah Inovasi terbaru yang mengubah limbah menjadi karya seni fungsional untuk kesehatan mental Anda dengan sedikit sentuhan karya seni</p>
             </div>
             <div class="about-grid">
                 <div class="about-card">
                     <i class="fas fa-recycle"></i>
                     <h3>Ramah Lingkungan</h3>
-                    <p>100% terbuat dari limbah bonggol jagung yang didaur ulang, mendukung gaya hidup sustainable</p>
+                    <p>100% terbuat dari limbah yang didaur ulang, yaitu limbah bonggol jagung dan juga limbah kayu furnitur</p>
                 </div>
                 <div class="about-card">
                     <i class="fas fa-spa"></i>
                     <h3>Relaksasi Total</h3>
-                    <p>Kombinasi aromaterapi, cahaya lembut, dan musik religi untuk pengalaman relaksasi menyeluruh</p>
+                    <p>Kombinasi aromaterapi, cahaya lembut, dan musik religi untuk memaksimalkan pengaruh metode relaksasi</p>
                 </div>
                 <div class="about-card">
                     <i class="fas fa-palette"></i>
                     <h3>Seni Budaya</h3>
-                    <p>Menampilkan motif kaligrafi dan batik khas Pekalongan yang memperkaya nilai estetika</p>
+                    <p>Menampilkan motif kaligrafi dan batik khas Pekalongan yang memperkaya nilai estetika serta memperkenalkan kearifan lokal kepada masyarakat luas</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Paket Produk Section -->
+<section id="paket" style="background: linear-gradient(135deg, var(--black-secondary), var(--black-light));">
+  <div class="container">
+    <div class="section-header">
+      <h2>Paket Produk Mis-qall Lamp</h2>
+      <p>Pilih paket sesuai kebutuhan Anda. Setiap paket sudah termasuk fitur unggulan sesuai levelnya.</p>
+    </div>
+
+    <h3 style="color: var(--gold-primary); margin-bottom: 2rem;">Paket Hemat</h3>
+    <div class="paket-grid">
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Hemat 1</h3>
+          <p>✔ Fitur A <br> ✔ Fitur B <br> ✔ Fitur C</p>
+          <div class="variant-price">Rp 199.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Hemat 2</h3>
+          <p>✔ Fitur A <br> ✔ Fitur B <br> ✔ Fitur C</p>
+          <div class="variant-price">Rp 199.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Hemat 3</h3>
+          <p>✔ Fitur A <br> ✔ Fitur B <br> ✔ Fitur C</p>
+          <div class="variant-price">Rp 199.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Hemat 4</h3>
+          <p>✔ Fitur A <br> ✔ Fitur B <br> ✔ Fitur C</p>
+          <div class="variant-price">Rp 199.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Hemat 5</h3>
+          <p>✔ Fitur A <br> ✔ Fitur B <br> ✔ Fitur C</p>
+          <div class="variant-price">Rp 199.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+      <!-- Ulangi 4x lagi untuk total 5 paket hemat -->
+    </div>
+
+    <h3 style="color: var(--gold-primary); margin: 3rem 0 2rem;">Paket Premium</h3>
+    <div class="variants-grid">
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Premium 1</h3>
+          <p>✔ Semua fitur Paket Hemat <br> ✔ Tambahan Musik Religi <br> ✔ Bonus Essential Oil</p>
+          <div class="variant-price">Rp 499.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-content">
+          <h3>Paket Premium 2</h3>
+          <p>✔ Semua fitur Paket Hemat <br> ✔ Speaker Premium <br> ✔ Koleksi Batik Eksklusif</p>
+          <div class="variant-price">Rp 699.000</div>
+          <a href="https://shopee.co.id" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Beli di Shopee</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Variants Section -->
     <section id="varian" style="background: linear-gradient(135deg, var(--black-light), var(--black-secondary));">
         <div class="container">
             <div class="section-header">
                 <h2>Pilih Varian Sesuai Kebutuhan Anda</h2>
-                <p>Setiap varian dirancang khusus untuk memberikan pengalaman relaksasi yang personal dan efektif</p>
+                <p>Setiap varian dirancang khusus untuk memberikan pengalaman relaksasi yang personal dan efektif, serta disesuaikan dengan kebutuhan</p>
             </div>
             <div class="variants-grid">
                 <div class="variant-card">
